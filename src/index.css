@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    /* Dark Futuristic Theme */
+    --background: #08061A;
+    --foreground: #FFFFFF;
+    
+    --card: rgba(18, 16, 31, 0.8);
+    --card-foreground: #FFFFFF;
+    
+    --popover: #12101F;
+    --popover-foreground: #FFFFFF;
+    
+    --primary: #7C3AED;
+    --primary-foreground: #FFFFFF;
+    
+    --secondary: #1E1A35;
+    --secondary-foreground: #A0A0B8;
+    
+    --muted: #0F0D1A;
+    --muted-foreground: #9CA3AF;
+    
+    --accent: #A78BFA;
+    --accent-foreground: #FFFFFF;
+    
+    --destructive: #FF4B4B;
+    --border: rgba(124, 58, 237, 0.15);
+    --input: #1E1A35;
+    --ring: #7C3AED;
+    
+    --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: 
+      radial-gradient(circle at 50% -20%, rgba(124, 58, 237, 0.15) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+.glass {
+  background: rgba(18, 16, 31, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #7C3AED, #5B21B6);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.5);
+}
+
+/* Dialog Overlay Blur */
+[data-radix-portal] > div:first-child {
+  backdrop-filter: blur(8px) !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
