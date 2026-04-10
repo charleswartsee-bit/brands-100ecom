@@ -30,7 +30,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 
 // --- CONFIGURATION ---
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbx8qfjTjAStkuDsilfx5rivbyjVbReGSTtBfnEPe6pTj817DKuR4F4gG9BY15_DOJuZ/exec";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxOVJv9IVFR4av1n7BMtn_MIbYHjkz8o2OMiV7c4xv_MR9DHjnaXdx2HPDWkH1k26r-/exec";
 const CATEGORY = 'Skincare';
 
 // --- DATA ---
